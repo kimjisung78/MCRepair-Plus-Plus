@@ -40,18 +40,18 @@ StringBuilder buf = new StringBuilder((array[startIndex] == null ? 16 : array[st
 <br><br>
 
 ## 4. Examples of correct patches
-### 4.1. 33rd patch - T2F
+### 4.1. 33rd patch - T3F
 #### I. Fixed Result
 ```java
 src/main/java/org/apache/commons/lang3/StringUtils.java: 3298
 -   StringBuilder buf = new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1);
-+   StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array[startIndex].toString().length());
++   StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array.toString().length());
 ```
 
 ```java
 src/main/java/org/apache/commons/lang3/StringUtils.java: 3383
 -   StringBuilder buf = new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length());
-+   StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array[startIndex].toString().length());
++   StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array.toString().length());
 ```
 
 #### II. Fixed chunks and locations
@@ -59,12 +59,12 @@ src/main/java/org/apache/commons/lang3/StringUtils.java: 3383
 * The number of fixed locations: 2 locations
 ```java
 src/main/java/org/apache/commons/lang3/StringUtils.java: 3298
-StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array[startIndex].toString().length());
+StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array.toString().length());
 ```
 
 ```java
 src/main/java/org/apache/commons/lang3/StringUtils.java: 3383
-StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array[startIndex].toString().length());
+StringBuilder buf = new StringBuilder(array[startIndex] == null ? 16 : array.toString().length());
 ```
 
 #### III. Explanation
