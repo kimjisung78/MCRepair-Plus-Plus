@@ -1,4 +1,4 @@
-# MCRepair Plus
+# MCRepair+
 * An Automated Program Repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"]() to improve complex multi-chunk bugs.
   * MCRepair
     * An APR technique that utilized a buggy block, patch optimization, and CodeBERT to target complex multi-chunk bugs.
@@ -10,10 +10,10 @@
     * Revised patch filtering and ranking: Patch filtering that adds a new filtering rule for removing unrelated patches and patch ranking that decreases the number of expected actions and applies the maximum formula, to improve patch optimization
     * proportional patch combination: Patch combination that gives higher top k values for a big logical buggy chunk that has many buggy locations, to improve patch optimization
 * Figures
-  * [Figure 1:](./figures/Figure1.png) Limitation1 and Improvement1 between MCRepair and MCRepair Plus. (RL: Repaired location, MRL: Minimized repaired location, ✚: Plus for improvement)
-  * [Figure 2:](./figures/Figure2.png) Limitation2 and Improvement2 between MCRepair and MCRepair Plus. (ST: Stop-words)
-  * [Figure 3:](./figures/Figure3.png) Limitation3 and Improvement3 between MCRepair and MCRepair Plus. (bLocs: The number of buggy locations for each chunk)
-  * [Figure 4:](./figures/Figure4.png) An overview of MCRepair Plus. (▲: Only use for training or validation, ◆: Only use for generation)
+  * [Figure 1:](./figures/Figure1.png) Limitation1 and Improvement1 between MCRepair and MCRepair+. (RL: Repaired location, MRL: Minimized repaired location, ✚: Plus for improvement)
+  * [Figure 2:](./figures/Figure2.png) Limitation2 and Improvement2 between MCRepair and MCRepair+. (ST: Stop-words)
+  * [Figure 3:](./figures/Figure3.png) Limitation3 and Improvement3 between MCRepair and MCRepair+. (bLocs: The number of buggy locations for each chunk)
+  * [Figure 4:](./figures/Figure4.png) An overview of MCRepair+. (▲: Only use for training or validation, ◆: Only use for generation)
     <img src="./figures/Figure4.png" width="100%">
   * [Figure 5:](./figures/Figure5.png) An example of the source code datasets. (–: Buggy location, +: Fixed location)
   * [Figure 6:](./figures/Figure6.png) The details of Ingredient Extraction. (M: Method, F: Field, R: Relationship, CD: Compared Difference, MRL: Minimized Repaired Location)
@@ -30,7 +30,7 @@
   * Figure 15: RQ3. Statistics per range on Defects4J <u>with</u> Perfect Fault Localization.
     * [Figure 15: (a) Chunk range](./figures/Figure15a.png)
     * [Figure 15: (b) Location range](./figures/Figure15b.png)
-  * [Figure 16:](./figures/Figure16.png) RQ4. Venn Diagram between MCRepair Plus and MCRepair. (Underlined: Unique <u>Type 3</u> bugs)
+  * [Figure 16:](./figures/Figure16.png) RQ4. Venn Diagram between MCRepair+ and MCRepair. (Underlined: Unique <u>Type 3</u> bugs)
 <br><br>
 
 ## 1. Location-level criterion
