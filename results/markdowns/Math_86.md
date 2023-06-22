@@ -1,7 +1,7 @@
 # Math 86
 * <h4>Bug type: Type 3 (T3B / T3F)</h4>
 * <h4>The number of chunks: 2 chunks (2 used chunks / 2 fixed chunks)</h4>
-* <h4>The number of locations: 6 locations (6 used locations / 5, 6 fixed locations)</h4>
+* <h4>The number of locations: 6 locations (4 used locations / 5, 6 fixed locations)</h4>
 <br>
 
 ## 1. Developer's patch
@@ -33,7 +33,7 @@ src/java/org/apache/commons/math/linear/CholeskyDecompositionImpl.java: 134-138
 
 ## 2. Used chunks and locations - T3B
 * The number of used chunks: 2 chunks
-* The number of used locations: 2 locations
+* The number of used locations: 4 locations
 ```java
 src/java/org/apache/commons/math/linear/CholeskyDecompositionImpl.java: 114-116
 if (lTData[i][i] < absolutePositivityThreshold) {

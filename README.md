@@ -1,5 +1,5 @@
 # MCRepair+
-* An Automated Program Repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"]() to improve complex multi-chunk bugs.
+* An Automated Program Repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) to improve complex multi-chunk bugs.
   * MCRepair
     * An APR technique that utilized a buggy block, patch optimization, and CodeBERT to target complex multi-chunk bugs.
       * Buggy block: A method that binds buggy chunks into a multi-buggy chunk using method and field dependencies and preprocesses the chunk with its top-1 buggy contexts to address large patch space and dependency problems between buggy chunks.
@@ -56,17 +56,18 @@ The difficulties are in the order of Type 3, Type 2, and Type 1. If an APR techn
     - T3F: A Type 3 bug that fixes chunks
 <br><br>
 
-## 3. Statstics of combined patches per evaluated result (331/8.8 K)
+## 3. Statstics of combined patches per evaluated result (331/2.25 K/82.75 K)
 ```powershell
-  |--- Total (331/8.8K)
-  |------ Plausible: 8,886
+  |--- Total (331/2.25 K/82.75 K)
+  |------ Compilable: 82,750
+  |------ Plausible: 2,252
   |------ Correct: 331
 ```
 <br><br>
 
-## 4. Statstics of repaired bugs per evaluated result (79/90)
+## 4. Statstics of repaired bugs per evaluated result (79/89)
 ```powershell
-  |--- Total (79/90)
+  |--- Total (79/89)
   |------ Chart (6/8)
   |--------- Plausible (2) : [C_25, 26]
   |--------- Correct (6)   : [C_1, 8, 9, 11, 20, 24]
@@ -81,8 +82,8 @@ The difficulties are in the order of Type 3, Type 2, and Type 1. If an APR techn
   |--------- Correct (30)  : [M_2, 5, 8, 22, 27, 30, 32, 34, 41, 43, 46, 56, 57, 58, 62, 63, 65, 70, 72, 75, 77, 79, 80, 82, 85, 86, 96, 98, 101, 104]
   |------ Mockito (6/6) 
   |--------- Correct (6)   : [MC_1, 5, 8, 22, 29, 38]
-  |------ Time (4/6)
-  |--------- Plausible (2) : [T_3, 18]
+  |------ Time (4/5)
+  |--------- Plausible (1) : [T_18]
   |--------- Correct (4)   : [T_4, 7, 17, 19]
 ```
 <br><br>
