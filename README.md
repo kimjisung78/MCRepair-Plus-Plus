@@ -1,9 +1,9 @@
 # MCRepair+
-* An Automated Program Repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) to improve complex multi-chunk bugs.
+* An automated program repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) to improve complex multi-chunk bugs.
   * MCRepair
     * An APR technique that utilized a buggy block, patch optimization, and CodeBERT to target complex multi-chunk bugs.
       * Buggy block: A method that binds buggy chunks into a multi-buggy chunk using method and field dependencies and preprocesses the chunk with its top-1 buggy contexts to address large patch space and dependency problems between buggy chunks.
-      * Patch optimization: A strategy that effectively combines candidate patches after filtering and ranking to address patch combination problem
+      * Patch optimization: A strategy that effectively combines candidate patches after filtering and ranking to address patch combination problem.
       * CodeBERT: A BERT for source code datasets to address the lack of datasets and out-of-vocabulary problems.
   * Improvements
     * Minimized repaired locations: Repaired locations that merge divided cases and exclude overlapped cases, to improve a buggy block and CodeBERT.
