@@ -1,9 +1,9 @@
 # MCRepair+
-* An automated program repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) to improve complex multi-chunk bugs.
+* An automated program repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to its previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) to improve complex multi-chunk bugs.
   * MCRepair
     * An APR technique that utilized a buggy block, patch optimization, and CodeBERT to target complex multi-chunk bugs.
       * "Buggy block" is a method that binds buggy chunks into a multi-buggy chunk using method and field dependencies to address large patch space and dependency problems between buggy chunks.
-      * "Patch optimization" is a strategy that combines candidate patches after filtering and ranking to address patch combination problem.
+      * "Patch optimization" is a strategy that combines candidate patches after filtering and ranking to address a patch combination problem.
       * "CodeBERT" is a specific BERT deep learning model designed for source code datasets to address a few datasets and out-of-vocabulary problems.
   * Improvements
     * "Minimized repaired locations"  are repaired locations that merge the divided cases and exclude overlapped cases to improve the buggy block and CodeBERT.
@@ -34,7 +34,7 @@
 <br><br>
 
 ## 1. Location-level criterion
-We strenthened the location-level criterion to prevent an infinite number of locations as follows:
+We strengthened the location-level criterion to prevent an infinite number of locations as follows:
 * We excluded blank, comment, and null locations that were not related to “FAULT_OF_OMISSION.”
     - “FAULT_OF_OMISSION” indicates a buggy location related to insertion(s).
     - A null location indicates a location that does nothing (e.g., “;” and “for (int j = 0; j < 5; j++);”).
