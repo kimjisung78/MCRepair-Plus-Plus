@@ -44,7 +44,7 @@ We strenthened the location-level criterion to prevent an infinite number of loc
 <br><br>
 
 ## 2. Bug types
-We classified the performances of our approach and baselines per bug type as follows: 
+We classified the performances of our approach and baselines per bug type using the location-level criterion as follows: 
 * "Type 1" indicates a single-chunk bug that uses or fixes a location
     - "T1B" denotes a "Type 1" that uses a location for fixing
     - "T1F" denotes a "Type 1" that fixes a location
