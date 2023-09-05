@@ -2,13 +2,13 @@
 * An automated program repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to the previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) to improve complex multi-chunk bugs.
   * MCRepair
     * An APR technique that utilized a buggy block, patch optimization, and CodeBERT to target complex multi-chunk bugs.
-      * Buggy block: A method that binds buggy chunks into a multi-buggy chunk using method and field dependencies and preprocesses the chunk with its top-1 buggy contexts to address large patch space and dependency problems between buggy chunks.
-      * Patch optimization: A strategy that effectively combines candidate patches after filtering and ranking to address patch combination problem.
-      * CodeBERT: A BERT for source code datasets to address the lack of datasets and out-of-vocabulary problems.
+      * "Buggy block" is a method that binds buggy chunks into a multi-buggy chunk using method and field dependencies to address large patch space and dependency problems between buggy chunks.
+      * "Patch optimization" is a strategy that combines candidate patches after filtering and ranking to address patch combination problem.
+      * "CodeBERT" is a specific BERT deep learning model designed for source code datasets to address a few datasets and out-of-vocabulary problems.
   * Improvements
-    * Minimized repaired locations: Repaired locations that merge divided cases and exclude overlapped cases, to improve a buggy block and CodeBERT.
-    * Revised patch filtering and ranking: Patch filtering that adds a new filtering rule for removing unrelated patches and patch ranking that decreases the number of expected actions and applies the maximum formula, to improve patch optimization
-    * proportional patch combination: Patch combination that gives higher top k values for a big logical buggy chunk that has many buggy locations, to improve patch optimization
+    * "Minimized repaired locations"  are repaired locations that merge the divided cases and exclude overlapped cases to improve the buggy block and CodeBERT.
+    * "Revised patch filtering and ranking" are patch filtering and ranking that add a new rule for unrelated patches and decreases calculate a high score with fewer expected actions and union denominator to improve the patch optimization
+    * "Proportional patch combination" is a patch combination that yields higher top k values to improve the patch optimization
 * Figures
   * [Figure 1:](./figures/Figure1.png) Buggy Locations between MCRepair and MCRepair+. (RL: Repaired location, MRL: Minimized repaired location, ✚: Plus for improvement, FAULT_OF_OMISSION: A location related to INSERT action(s))
   * [Figure 2:](./figures/Figure2.png) Patch Filtering and Ranking between MCRepair and MCRepair+. (SW: Stop-words)
@@ -34,26 +34,28 @@
 <br><br>
 
 ## 1. Location-level criterion
-* We did not consider null, blank, and comment locations that were not related to “FAULT_OF_OMISSION.”
-    - “FAULT_OF_OMISSION” is a buggy location related to insertions.
-    - A null location is a location that only includes “;” or does nothing (e.g., “;” and “for (int j = 0; j < 5; j++);”).
-    - A block’s end is not a null location because the block designates a flow range.
-* We checked whether each location was correct.
-* We distinguished divided and overlapped locations.
+We strenthened the location-level criterion to prevent an infinite number of locations as follows:
+* We excluded blank, comment, and null locations that were not related to “FAULT_OF_OMISSION.”
+    - “FAULT_OF_OMISSION” indicates a buggy location related to insertion(s).
+    - A null location indicates a location that does nothing (e.g., “;” and “for (int j = 0; j < 5; j++);”).
+    - A block end is not a null location because it designates a flow range.
+* We checked whether each location was correct or not.
+* We identified divided and overlapped locations.
 <br><br>
 
 ## 2. Bug types
-The difficulties are in the order of Type 3, Type 2, and Type 1. If an APR technique has Type 1, Type 2, and Type 3 in a module, we resulted in Type 3 based on the difficulties.
+We classified the performances of our approach and baselines per bug type as follows: 
+* "Type 1" indicates a single-chunk bug that uses or fixes a location
+    - "T1B" denotes a "Type 1" that uses a location for fixing
+    - "T1F" denotes a "Type 1" that fixes a location
+* "Type 2" indicates a single-chunk bug that uses or fixes locations
+    - "T2B" denotes a "Type 2" that uses locations for fixing
+    - "T2F" denotes a "Type 2" that fixes locations
+* "Type 3" indicates a multi-chunk bug that uses or fixes chunks
+    - "T3B" denotes a "Type 3" that uses chunks for fixing
+    - "T3F" denotes a "Type 3" that fixes chunks
 
-* Type 1: A single-chunk bug that uses or fixes a location
-    - T1B: A Type 1 bug that uses a location for fixing
-    - T1F: A Type 1 bug that fixes a location
-* Type 2: A single-chunk bug that uses or fixes locations
-    - T2B: A Type 2 bug that use locations for fixing
-    - T2F: A Type 2 bug that fixes locations
-*  Type 3: A multi-chunk bug that uses or fixes chunks
-    - T3B: A Type 3 bug that uses chunks for fixing
-    - T3F: A Type 3 bug that fixes chunks
+The difficulties were in the order of "Type 3," "Type 2," and "Type 1". When a module had all the types, we resulted in "Type 3" based on the difficulties.
 <br><br>
 
 ## 3. Statstics of combined patches per evaluated result (331/2.25 K/82.75 K)
