@@ -37,7 +37,7 @@
 ## 1. Location-level criterion
 We strengthened the location-level criterion to prevent an infinite number of locations as follows:
 * We excluded blank, comment, and null locations that were not related to “FAULT_OF_OMISSION.”
-    - “FAULT_OF_OMISSION” indicates a buggy location related to insertion(s).
+    - “FAULT_OF_OMISSION” indicates a buggy location related to one or more insertions.
     - A null location indicates a location that does nothing (e.g., “;” and “for (int j = 0; j < 5; j++);”).
     - A block end is not a null location because it designates a flow range.
 * We checked whether each location was correct or not.
