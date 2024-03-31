@@ -10,7 +10,7 @@
     * "Revised patch filtering and ranking" are patch filtering and ranking that add a new rule for unrelated patches and decreases calculate a high score with fewer expected actions and union denominator to improve the patch optimization.
     * "Proportional patch combination" is a patch combination that yields higher top k values to improve the patch optimization.
 * Figures
-  * [Figure 1:](./figures/Figure1.png) Comparison of Buggy Locations between MCRepair and MCRepair++. (RL: Repaired location, MRL: Minimized repaired location, ✚: Plus for improvement, FAULT_OF_OMISSION: A location related to one or more INSERT actions)
+  * [Figure 1:](./figures/Figure1.png) Comparison of Buggy Locations between MCRepair and MCRepair++. (RL: Repaired location, MRL: Minimized repaired location, "✚✚": Plus-Plus related to our improvements, FAULT_OF_OMISSION: A location related to one or more INSERT actions)
   * [Figure 2:](./figures/Figure2.png) Comparison of Patch Filtering and Ranking between MCRepair and MCRepair++. (SW: Stop-words)
   * [Figure 3:](./figures/Figure3.png) Comparison of Patch Combination between MCRepair and MCRepair++. (bLocs: The number of buggy locations for each chunk)
   * [Figure 4:](./figures/Figure4.png) An overview of MCRepair++. (▲: Only use for training or validation, ◆: Only use for generation)
