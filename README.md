@@ -22,8 +22,8 @@
   * [Figure 11:](./figures/Figure11.png) Comparison of Buggy Block between MCRepair++ and MCRepair (-->: Limitation to Improvement).
   * [Figure 12:](./figures/Figure12.png) Comparison of Patch Optimization between MCRepair++ and MCRepair. 
   * Figure 13: Statistics of evaluated results on Defects4J. 
-    * [(a) Evaluated patches](./figures/Figure13-a.png) Evaluated patches
-    * [(b) Evaluated bugs](./figures/Figure13-b.png) Evaluated bugs
+    * [(a) Evaluated patches](./figures/Figure13-a.png)
+    * [(b) Evaluated bugs](./figures/Figure13-b.png)
   * Figure 14: RQ2. Venn Diagram for Table 4. (<u>Underlined</u>: Unique <u>Type 3</u> bugs) 
     * [(a) Between MCRepair++ and MCRepair](./figures/Figure14-a.png)
     * [(b) Between MCRepair++ and Others](./figures/Figure14-b.png)
