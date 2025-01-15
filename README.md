@@ -24,7 +24,7 @@
   * Figure 13: Statistics of evaluated results on Defects4J. 
     * [(a) Evaluated patches](./figures/Figure13-a.png)
     * [(b) Evaluated bugs](./figures/Figure13-b.png)
-  * Figure 14: RQ2. Venn Diagram for Table 4. (<u>Underlined</u>: Unique <u>Type 3</u> bugs) 
+  * Figure 14: RQ2. Venn Diagram for Table 4. (<ins>Underlined</ins>: Unique <ins>Type 3</ins> bugs) 
     * [(a) Between MCRepair++ and MCRepair](./figures/Figure14-a.png)
     * [(b) Between MCRepair++ and Others](./figures/Figure14-b.png)
 <br><br>
