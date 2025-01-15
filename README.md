@@ -11,7 +11,7 @@
     * "Proportional patch combination" is a patch combination that yields higher top k values to improve the patch optimization.
 * Figures
   * [Figure 2:](./figures/Figure2.png) An overview of MCRepair++. (▲: Only use for training or validation, ◆: Only use for generation, ✚✚: Plus-Plus related to our improvements)<br/><img src="./figures/Figure2.png" width="100%">
-  * [Figure 3:](./figures/Figure3.png) An example of the source code datasets. (HP: Human-written Patch, <u>Underlined</u>: A buggy location, –: A added location for fixing, +: A deleted location for fixing, <->: Code changes)
+  * [Figure 3:](./figures/Figure3.png) An example of the source code datasets. (HP: Human-written Patch, <ins>Underlined</ins>: A buggy location, –: A added location for fixing, +: A deleted location for fixing, <->: Code changes)
   * [Figure 4:](./figures/Figure4.png) Detailed depiction of Ingredient Extraction. (M: Method, F: Field, R: Relationship, CD: Compared Difference, MRL: Minimized Repaired Location, FAULT_OF_OMISSION: A location related to one or more INSERT actions)
   * [Figure 5:](./figures/Figure5.png) Detailed depiction of Buggy Block Preprocessing. (ST: Special Tokens, TR: Truncation)
   * [Figure 6:](./figures/Figure6.png) Detailed depiction of Fine-tuning and Patch Generation.
@@ -41,17 +41,17 @@ We strengthened the location-level criterion to prevent an infinite number of lo
 
 ## 2. Bug types
 We classified the performances of our approach and baselines per bug type using the location-level criterion as follows: 
-* <u>Type 1</u> indicates a single-chunk bug that uses or fixes a location.
-    - "T1B" denotes a <u>Type 1</u> that uses a location for fixing.
-    - "T1F" denotes a <u>Type 1</u> that fixes a location.
-* <u>Type 2</u> indicates a single-chunk bug that uses or fixes locations.
-    - "T2B" denotes a <u>Type 2</u> that uses locations for fixing.
-    - "T2F" denotes a <u>Type 2</u> that fixes locations.
-* <u>Type 3</u> indicates a multi-chunk bug that uses or fixes chunks.
-    - "T3B" denotes a <u>Type 3</u> that uses chunks for fixing.
-    - "T3F" denotes a <u>Type 3</u> that fixes chunks.
+* <ins>Type 1</ins> indicates a single-chunk bug that uses or fixes a location.
+    - "T1B" denotes a <ins>Type 1</ins> that uses a location for fixing.
+    - "T1F" denotes a <ins>Type 1</ins> that fixes a location.
+* <ins>Type 2</ins> indicates a single-chunk bug that uses or fixes locations.
+    - "T2B" denotes a <ins>Type 2</ins> that uses locations for fixing.
+    - "T2F" denotes a <ins>Type 2</ins> that fixes locations.
+* <ins>Type 3</ins> indicates a multi-chunk bug that uses or fixes chunks.
+    - "T3B" denotes a <ins>Type 3</ins> that uses chunks for fixing.
+    - "T3F" denotes a <ins>Type 3</ins> that fixes chunks.
 
-Moreover, we determined the difficulties of bug types in the following order: <u>Type 3</u>, <u>Type 2</u>, and <u>Type 1</u>. When the bug type of a module was able to be classified as <u>Type 3</u>, <u>Type 2</u>, and <u>Type 1</u>, we decided the type as <u>Type 3</u> based on the pre-determined difficulties.
+Moreover, we determined the difficulties of bug types in the following order: <ins>Type 3</ins>, <ins>Type 2</ins>, and <ins>Type 1</ins>. When the bug type of a module was able to be classified as <ins>Type 3</ins>, <ins>Type 2</ins>, and <ins>Type 1</ins>, we decided the type as <ins>Type 3</ins> based on the pre-determined difficulties.
 <br><br>
 
 ## 3. Statstics of combined patches per evaluated result (331/2.25 K/82.75 K)
