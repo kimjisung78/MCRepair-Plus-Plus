@@ -1,4 +1,16 @@
 # MCRepair++
+If you want to use this project, please cite our paper published at IEEE Access. In addition, when you have a question, please write an issue on this github url.
+```
+@article{MCRepair++-2025,
+  title={Improving Patch Optimization with Buggy Block for Complex Program Repair},
+  author={Jisung Kim, Aslan Safarovich Abdinabiev, and Byungjeong Lee},
+  journal={IEEE Access},
+  pages={},
+  year={2025},
+  publisher={IEEE}
+}
+```
+
 * An automated program repair (APR) technique that applied minimized repaired locations, revised patch filtering and ranking, and proportional patch combination to its previous work ["MCRepair"](https://dl.acm.org/doi/10.1145/3555776.3577762) for complex multi-chunk bugs.
   * MCRepair
     * An APR technique that utilized a buggy block, patch optimization, and CodeBERT to target complex multi-chunk bugs.
@@ -28,6 +40,13 @@
     * [(a) Between MCRepair++ and MCRepair](./figures/Figure14-a.png)
     * [(b) Between MCRepair++ and Others](./figures/Figure14-b.png)
 <br><br>
+
+## Change Logs
+|Date|Title|Descrition|
+|---|---|---|
+|2025-02-15|Early Access|The MCRepair++'s file for early access was uploaded.|
+
+<br>
 
 ## 1. Location-level criterion
 We strengthened the location-level criterion to prevent an infinite number of locations as follows:
