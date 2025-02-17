@@ -5,6 +5,7 @@ If you want to use this project, please cite our paper published at IEEE Access.
   title={Improving Patch Optimization with Buggy Block for Complex Program Repair},
   author={Jisung Kim, Aslan Safarovich Abdinabiev, and Byungjeong Lee},
   journal={IEEE Access},
+  volumes={},
   pages={},
   year={2025},
   publisher={IEEE}
