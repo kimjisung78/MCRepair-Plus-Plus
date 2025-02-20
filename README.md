@@ -2,13 +2,14 @@
 If you want to use this project, please cite our paper published at IEEE Access. In addition, when you have a question, please write an issue on this github url.
 ```
 @article{MCRepair++-2025,
-  title={Improving Patch Optimization with Buggy Block for Complex Program Repair},
-  author={Jisung Kim, Aslan Safarovich Abdinabiev, and Byungjeong Lee},
-  journal={IEEE Access},
-  volumes={},
-  pages={},
-  year={2025},
-  publisher={IEEE}
+  title = {Improving Patch Optimization with Buggy Block for Complex Program Repair},
+  author = {Jisung Kim, Aslan Safarovich Abdinabiev, and Byungjeong Lee},
+  journal = {IEEE Access},
+  year = {2025},
+  volume = {13},
+  pages = {30420-30443},
+  publisher = {IEEE},
+  doi = "https://doi.org/10.1109/ACCESS.2025.3541336"
 }
 ```
 
@@ -45,7 +46,8 @@ If you want to use this project, please cite our paper published at IEEE Access.
 ## Change Logs
 |Date|Title|Descrition|
 |---|---|---|
-|2025-02-15|Early Access|The MCRepair++'s file for early access was uploaded.|
+|2025-02-13|IEEE Xplore|The MCRepair++'s file for early access was uploaded.|
+|2025-02-19|IEEE Xplore|[The MCRepair++'s paper](https://ieeexplore.ieee.org/document/10883973) was published.|
 
 <br>
 
