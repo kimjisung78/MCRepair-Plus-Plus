@@ -46,8 +46,8 @@ If you want to use this project, please cite our paper published at IEEE Access.
 ## Change Logs
 |Date|Title|Descrition|
 |---|---|---|
-|2025-02-13|IEEE Xplore|The MCRepair++'s file for early access was uploaded.|
-|2025-02-19|IEEE Xplore|[The MCRepair++'s paper](https://ieeexplore.ieee.org/document/10883973) was published.|
+|2025-02-13|IEEE Xplore Digital Library|The MCRepair++'s file for early access was uploaded.|
+|2025-02-19|IEEE Xplore Digital Library|[The MCRepair++'s paper](https://ieeexplore.ieee.org/document/10883973) was published.|
 
 <br>
 
